@@ -1,0 +1,1962 @@
+{
+"faqs": [
+  
+  {
+  "intent": "greet_with_intro",
+  "examples": [
+    "hi","hello","hey",
+    "good morning","good evening","good afternoon",
+    "hi there","hello bot","hey assistant"
+  ],
+  "responses": [
+    "Hello! I am iConnect Virtual Assistant. How can I help you today?",
+    "Hi there! I am iConnect Virtual Assistant. How can I assist you?"
+  ],
+  "metadata": {
+    "category": "General",
+    "requires_login": false,
+    "access_platform": "iConnect Virtual Assistant",
+    "keywords": ["greeting", "say hello", "hi", "good morning", "introduce bot"],
+    "related_intents": ["goodbye", "thankyou", "bot_name"]
+  }
+  },
+  {
+  "intent": "goodbye",
+  "examples": ["bye", "goodbye", "see you", "talk to you later"],
+  "responses": ["Goodbye! Have a nice day.", "See you soon!"],
+  "metadata": {
+    "category": "General",
+    "requires_login": false,
+    "access_platform": "iConnect Virtual Assistant",
+    "keywords": ["farewell", "bye", "see you later", "goodbye message"],
+    "related_intents": ["greet_with_intro", "thankyou"]
+  }
+  },
+  {
+  "intent": "thankyou",
+  "examples": ["thanks", "thank you", "appreciate it"],
+  "responses": ["You're welcome!", "Glad I could help!"],
+  "metadata": {
+    "category": "General",
+    "requires_login": false,
+    "access_platform": "iConnect Virtual Assistant",
+    "keywords": ["thanks", "thank you", "appreciation response", "gratitude"],
+    "related_intents": ["greet_with_intro", "goodbye"]
+  }
+  },
+  {
+  "intent": "bot_name",
+  "examples": [
+    "what is your name",
+    "who are you",
+    "may I know your name",
+    "tell me your name",
+    "do you have a name",
+    "bot name",
+    "who am I talking to"
+  ],
+  "responses": [
+    "I am iConnect Virtual Assistant, here to help you with your queries."
+  ],
+  "metadata": {
+    "category": "General",
+    "requires_login": false,
+    "access_platform": "iConnect Virtual Assistant",
+    "keywords": ["bot name", "identity", "who are you", "virtual assistant info"],
+    "related_intents": ["greet_with_intro", "fallback"]
+  }
+  },
+  {
+  "intent": "fallback",
+  "examples": [
+    "what are you doing",
+    "tell me a joke",
+    "who is the president",
+    "what is the weather",
+    "random question",
+    "how are you"
+  ],
+  "responses": [
+    "😅 I wish I could help with everything, but I’m specialized in **iConnect topics** like timesheets, reimbursements, policies, trainings, and iTravel. For anything else, try the company intranet or Teams.",
+    "🤔 That’s an interesting question! I’m here to help with **iConnect-related queries**. For everything else, the company intranet or Teams might have your answer.",
+    "Haha, I’d love to answer that, but my superpowers are limited to **iConnect topics**—like timesheets, policies, trainings, and iTravel. For other stuff, check intranet or Teams!"
+  ],
+  "metadata": {
+    "category": "General",
+    "requires_login": false,
+    "access_platform": "iConnect Virtual Assistant",
+    "keywords": ["fallback", "unknown query", "default response", "unhandled question"],
+    "related_intents": ["greet_with_intro", "bot_name"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "iconnect_overview",
+  "examples": [
+    "give me a quick overview of iconnect",
+    "what is iconnect",
+    "explain iconnect modules",
+    "tell me all features of iconnect",
+    "summary of iconnect",
+    "what for we use this iconnect",
+    "why do we need iconnect",
+    "overview of iconnect",
+    "how will you assist me?",
+    "Type of questions you can answer"
+  ],
+  "responses": [
+    "iConnect is an employee self-service portal used to manage HR and work-related tasks. It includes modules like:\n\n- Leaves: Apply for LOP, Diversity, Privilege, and Flexi Leave\n- Holiday List: Check holidays in Dashboard or Personal\n- Useful Links: Access iSupport, Helpdesk (raise tickets), and ADP ESS (payslips & tax slips)\n- Timesheet: Fill and submit before 22nd each month\n- Employee Search: Find employees by name or code\n- Newsletter: Get monthly company updates\n- iTravel: Request domestic/international travel and view history\n- iVisa: Request visa for official travel\n- iForex: Manage currency exchange for travel\n- iTraining: Register for training sessions\n- iReimbursement: Create and check reimbursements\n- Risk Management: Report and track identified risks"
+  ],
+  "metadata": {
+    "category": "Overview",
+    "requires_login": true,
+    "modules": [
+      "Leaves",
+      "Holiday List",
+      "Useful Links",
+      "Timesheet",
+      "Employee Search",
+      "Newsletter",
+      "iTravel",
+      "iVisa",
+      "iForex",
+      "iTraining",
+      "iReimbursement",
+      "Risk Management"
+    ],
+    "keywords": [
+      "overview",
+      "features",
+      "modules",
+      "summary",
+      "self-service portal",
+      "employee portal",
+      "HR system"
+    ]
+  }
+  },
+
+
+
+
+
+
+  
+
+  {
+  "intent": "apply_leave",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Application Process",
+    "priority": "high",
+    "tags": ["apply leave", "request leave", "leave process", "leave steps"]
+  },
+  "examples": [
+    "how to apply leave",
+    "steps to apply for leave",
+    "What are the steps to apply leave",
+    "can you tell me the process to apply leave",
+    "how do I request a leave",
+    "what is the procedure to apply leave"
+  ],
+  "responses": [
+    "To apply for leave, go to **Personal → Leaves → Apply Leave**. Select day type (full/half), leave type, from date, to date, and provide a comment before submitting."
+  ]
+  },
+  {
+  "intent": "where_to_apply_leave",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Navigation",
+    "priority": "high",
+    "tags": ["where to apply", "leave menu", "leave section", "apply leave location"]
+  },
+  "examples": [
+    "where do I apply for leave",
+    "which menu has leave application",
+    "in which section can I apply leave",
+    "where to submit leave request"
+  ],
+  "responses": [
+    "You can apply for leave under **Personal → Leaves → Apply Leave**."
+  ]
+  },
+  {
+  "intent": "day_type_leave",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Day Type",
+    "priority": "medium",
+    "tags": ["day type", "half day", "full day", "morning half", "second half"]
+  },
+  "examples": [
+    "what is day type in leave application",
+    "difference between full day and half day leave",
+    "can I apply for half day leave",
+    "what is morning half and second half leave",
+    "what are the types of leaves in a day"
+  ],
+  "responses": [
+    "Day type refers to whether you are applying for a **Full Day** or **Half Day** leave (Morning Half or Second Half)."
+  ]
+  },
+  {
+  "intent": "leave_type",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Leave Types",
+    "priority": "high",
+    "tags": ["leave types", "sick leave", "casual leave", "privilege leave", "flexi leave"]
+  },
+  "examples": [
+    "what are the types of leaves",
+    "different leave categories",
+    "which leave types can I apply for",
+    "what is sick leave or casual leave"
+  ],
+  "responses": [
+    "Common leave types include **Loss of Pay (LOP)** and **Diversity Leave**. Based on roles, employees may also have **Privilege Leave** and **Flexi Leave** as options."
+  ]
+  },
+  {
+  "intent": "diversity_leave",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Special Leave",
+    "priority": "medium",
+    "tags": ["diversity leave", "special leave", "inclusivity", "hr policy"]
+  },
+  "examples": [
+    "what is diversity leave",
+    "meaning of diversity leave",
+    "when can I take diversity leave",
+    "explain diversity leave"
+  ],
+  "responses": [
+    "Diversity Leave is a special category of leave provided for **inclusivity purposes**. Please check company’s HR policy for detailed eligibility."
+  ]
+  },
+  {
+  "intent": "leave_dates",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Duration",
+    "priority": "medium",
+    "tags": ["leave dates", "from date", "to date", "multiple days leave"]
+  },
+  "examples": [
+    "how to select from date and to date in leave",
+    "can I apply leave for multiple days",
+    "how to apply for 2 days leave",
+    "how to give start and end date of leave"
+  ],
+  "responses": [
+    "When applying for leave, select the **From Date** and **To Date** to specify your leave duration. For a single day, both dates should be the same."
+  ]
+  },
+  {
+  "intent": "leave_comment",
+  "metadata": {
+    "category": "Leave Management",
+    "subcategory": "Comments",
+    "priority": "low",
+    "tags": ["leave comment", "reason for leave", "mandatory field", "explanation"]
+  },
+  "examples": [
+    "what to write in comment while applying leave",
+    "is reason mandatory for leave",
+    "should I give explanation when applying leave",
+    "how to provide reason for leave"
+  ],
+  "responses": [
+    "When applying for leave, you must enter a **comment** to specify the reason for your leave request."
+  ]
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "check_holiday_list",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday Access",
+    "year": "2025",
+    "priority": "high",
+    "tags": ["holiday", "check holiday list", "view holidays", "dashboard"]
+  },
+  "examples": [
+    "how to check holiday list",
+    "how to check list of holidays of all branches",
+    "where can I see holidays",
+    "holiday list location",
+    "can you tell me the list of holidays",
+    "steps to view holidays"
+  ],
+  "responses": [
+    "You can check the holiday list in **Dashboard → Holiday List** or **Personal → Holidays**."
+  ]
+  },
+  {
+  "intent": "company_wide_holidays",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday Policy",
+    "year": "2025",
+    "priority": "medium",
+    "tags": ["holiday", "company-wide", "location specific", "policy"]
+  },
+  "examples": [
+    "are holidays same for everyone",
+    "is holiday list same across all locations",
+    "do holidays change based on office location",
+    "are holidays company wide"
+  ],
+  "responses": [
+    "Some holidays are company-wide, while others may vary based on your office location or region. Please check your **Personal → Holidays** section for the holidays applicable to you."
+  ]
+  },
+  {
+  "intent": "next_upcoming_holiday",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Upcoming Holiday",
+    "year": "2025",
+    "priority": "high",
+    "tags": ["holiday", "upcoming holiday", "next holiday", "calendar"]
+  },
+  "examples": [
+    "what is the next holiday",
+    "tell me the upcoming holiday",
+    "which is the nearest holiday",
+    "next holiday date please"
+  ],
+  "responses": [
+    "You can check the upcoming holiday in **Dashboard → Holiday List**, where the nearest holidays are displayed."
+  ]
+  },
+  {
+  "intent": "holiday_list_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Annual Holiday Calendar",
+    "year": "2025",
+    "priority": "high",
+    "tags": ["holiday", "holiday list", "holiday calendar", "yearly holidays", "2025"]
+  },
+  "examples": [
+    "tell me the holiday list for 2025",
+    "what are the holidays in 2025",
+    "list of holidays in this year",
+    "list of holidays",
+    "can you give me the holidays month wise",
+    "holiday calendar 2025",
+    "calendar",
+    "holidays list",
+    "give me the list of holidays"
+  ],
+  "responses": [
+    "Here is the holiday list for 2025:\n\n- **January**: New Year (01-01-2025), Makara Sankranti (14-01-2025)\n- **February**: No holidays\n- **March**: Holi (14-03-2025), Ramzan (31-03-2025)\n- **April**: Good Friday (18-04-2025)\n- **May**: May Day (01-05-2025)\n- **June**: No holidays\n- **July**: No holidays\n- **August**: Independence Day (15-08-2025), Ganesh Chaturthi (27-08-2025)\n- **September**: No holidays\n- **October**: Vijaya Dasami & Gandhi Jayanti (02-10-2025), Diwali (21-10-2025 & 22-10-2025)\n- **November**: No holidays\n- **December**: Christmas (25-12-2025)"
+  ]
+  },
+  {
+  "intent": "holiday_january_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "January",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "January 2025"]
+  },
+  "examples": [
+    "holidays in january",
+    "what are the holidays in january 2025",
+    "what are the available holidays in jan",
+    "available holidays in jan",
+    "list january holidays"
+  ],
+  "responses": [
+    "January holidays: **New Year (01-01-2025)**, **Makara Sankranti (14-01-2025)**."
+  ]
+  },
+  {
+  "intent": "holiday_february_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "February",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "February 2025"]
+  },
+  "examples": [
+    "holidays in february",
+    "february holiday list",
+    "what are the holidays in february 2025",
+    "available holidays in feb"
+  ],
+  "responses": [
+    "February holidays: No holidays."
+  ]
+  },
+  {
+  "intent": "holiday_march_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "March",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "March 2025"]
+  },
+  "examples": [
+    "holidays in march",
+    "march holidays 2025",
+    "what are the holidays in march",
+    "available holidays in march"
+  ],
+  "responses": [
+    "March holidays: Holi (14-03-2025), Ramzan (31-03-2025)."
+  ]
+  },
+  {
+  "intent": "holiday_april_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "April",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "April 2025"]
+  },
+  "examples": [
+    "holidays in april",
+    "april holiday list",
+    "what are the holidays in april 2025",
+    "available holidays in april"
+  ],
+  "responses": [
+    "April holidays: Good Friday (18-04-2025)."
+  ]
+  },
+  {
+  "intent": "holiday_may_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "May",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "May 2025"]
+  },
+  "examples": [
+    "holidays in may",
+    "may holiday list",
+    "what are the holidays in may 2025",
+    "available holidays in may"
+  ],
+  "responses": [
+    "May holidays: May Day (01-05-2025)."
+  ]
+  },
+  {
+  "intent": "holiday_june_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "June",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "June 2025"]
+  },
+  "examples": [
+    "holidays in june",
+    "june holiday list",
+    "what are the holidays in june",
+    "available holidays in june"
+  ],
+  "responses": [
+    "June holidays: No holidays."
+  ]
+  },
+  {
+  "intent": "holiday_july_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "July",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "July 2025"]
+  },
+  "examples": [
+    "holidays in july",
+    "july holiday list",
+    "what are the holidays in july 2025",
+    "available holidays in july"
+  ],
+  "responses": [
+    "July holidays: No holidays."
+  ]
+  },
+  {
+  "intent": "holiday_august_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "August",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "August 2025"]
+  },
+  "examples": [
+    "holidays in august",
+    "august holiday list",
+    "what are the holidays in august 2025",
+    "available holidays in august"
+  ],
+  "responses": [
+    "August holidays: Independence Day (15-08-2025), Ganesh Chaturthi (27-08-2025)."
+  ]
+  },
+  {
+  "intent": "holiday_september_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "September",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "September 2025"]
+  },
+  "examples": [
+    "holidays in september",
+    "september holiday list",
+    "what are the holidays in september 2025",
+    "available holidays in september"
+  ],
+  "responses": [
+    "September holidays: No holidays."
+  ]
+  },
+  {
+  "intent": "holiday_october_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "October",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "October 2025"]
+  },
+  "examples": [
+    "holidays in october",
+    "october holiday list",
+    "what are the holidays in october 2025",
+    "available holidays in october"
+  ],
+  "responses": [
+    "October holidays: Vijaya Dasami & Gandhi Jayanti (02-10-2025), Diwali (21-10-2025 & 22-10-2025)."
+  ]
+  },
+  {
+  "intent": "holiday_november_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "November",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "November 2025"]
+  },
+  "examples": [
+    "holidays in november",
+    "november holiday list",
+    "what are the holidays in november 2025",
+    "available holidays in november"
+  ],
+  "responses": [
+    "November holidays: No holidays."
+  ]
+  },
+  {
+  "intent": "holiday_december_2025",
+  "metadata": {
+    "category": "Leave & Holidays",
+    "subcategory": "Holiday List",
+    "year": "2025",
+    "month": "December",
+    "priority": "medium",
+    "tags": ["holiday", "leave", "festival", "December 2025"]
+  },
+  "examples": [
+    "holidays in december",
+    "december holiday list",
+    "what are the holidays in december 2025",
+    "available holidays in december"
+  ],
+  "responses": [
+    "December holidays: Christmas (25-12-2025)."
+  ]
+  },
+ 
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "useful_links_location",
+  "examples": [
+    "where can I find useful links",
+    "how to access useful links",
+    "location of useful links menu",
+    "where is useful link section",
+    "what is useful link",
+    "usefull linked used for",
+    "what are the links in useful links"
+  ],
+  "responses": [
+    "You can access Useful Links from **Dashboard → Useful Link**, where you will find:\n\n- **iSupport** → For Trainings (Login or Register).\n- **Helpdesk Application** → To raise tickets for any IT-related queries (Login or Register).\n- **ADP ESS** → For payslips, declarations, Form 16, and other tax-related documents (Login or Register)."
+  ],
+  "metadata": {
+    "category": "Navigation",
+    "requires_login": true,
+    "portals": ["iSupport", "Helpdesk", "ADP ESS"],
+    "keywords": ["dashboard", "useful links", "applications", "support"]
+  }
+  },
+  {
+  "intent": "isupport_info",
+  "examples": [
+    "what is isupport",
+    "how to use isupport",
+    "isupport login details",
+    "isupport registration process",
+    "what can we do in isupport",
+    "what types of trainings are available in itraining?",
+    "available trainings"
+  ],
+  "responses": [
+    "iSupport is used for training-related support. You need to login (https://isupport.intelizign.com/) with your employee ID and password to access the training modules.\n\nMostly available trainings include **Polarion, Mendix, DevOps, and Teamcenter**."
+  ],
+  "metadata": {
+    "category": "Training",
+    "requires_login": true,
+    "portal": "iSupport",
+    "link": "https://isupport.intelizign.com/",
+    "keywords": ["training", "polarion", "mendix", "devops", "teamcenter"]
+  }
+  },
+  {
+  "intent": "helpdesk_info",
+  "examples": [
+    "what is helpdesk application",
+    "how to raise ticket in helpdesk",
+    "helpdesk login or register",
+    "can I get IT support in helpdesk",
+    "steps to use helpdesk application"
+  ],
+  "responses": [
+    "The Helpdesk Application is for IT support. You must login or register(https://helpdesk.intelizign.com/) and then raise a ticket for any IT-related issues."
+  ],
+  "metadata": {
+    "category": "IT Support",
+    "requires_login": true,
+    "portal": "Helpdesk",
+    "link": "https://helpdesk.intelizign.com/",
+    "keywords": ["IT support", "ticket", "vpn", "laptop", "software", "helpdesk"]
+  }
+  },
+  {
+  "intent": "adp_ess_info",
+  "examples": [
+    "what is ADP ESS",
+    "what is the process for getting imcome tax reimbursement",
+    "adp ess login process",
+    "how to register in ADP ESS",
+    "how to get payslip in ADP ESS",
+    "can I download tax slips from ADP ESS",
+    "how to submit claims in ADP ESS",
+    "how to get reimbursement of income tax",
+    "how to claim income tax reimbursement",
+    "where to submit income tax claims",
+    "how can I get tax reimbursement",
+    "income tax reimbursement process in ADP",
+    "claim tax back via ADP ESS"
+  ],
+  "responses": [
+    "ADP ESS allows you to login or register to view and download **payslips** and **Form16**. You can also use the **Claim Submission** section to get reimbursement of income tax.\n\nHere is the link: [ADP ESS Login](https://www.vista.adp.com/in/V6/ess/login)"
+  ],
+  "metadata": {
+    "category": "Payroll",
+    "requires_login": true,
+    "portal": "ADP ESS",
+    "link": "https://www.vista.adp.com/in/V6/ess/login",
+    "keywords": ["payslip", "form16", "income tax", "reimbursement", "salary"]
+  }
+  },
+  {
+  "intent": "useful_links_summary",
+  "examples": [
+    "what are the links in useful links",
+    "list all options in useful link",
+    "what links are available in dashboard useful link",
+    "which applications are under useful links"
+  ],
+  "responses": [
+    "The Useful Links section has three applications: iSupport (for trainings), Helpdesk Application (for IT support), and ADP ESS (for payslips and tax slips)."
+  ],
+  "metadata": {
+    "category": "Navigation",
+    "requires_login": true,
+    "portals": ["iSupport", "Helpdesk", "ADP ESS"],
+    "keywords": ["links", "applications", "dashboard", "navigation"]
+  }
+  },
+  {
+  "intent": "raise_ticket_location",
+  "examples": [
+    "where can I raise a ticket",
+    "how to raise IT support ticket",
+    "where do I go to submit a helpdesk ticket",
+    "which application is used to raise tickets",
+    "where to raise ticket for technical issues",
+    "I want raise a ticket for VPN",
+    "I want raise a ticket for YouTube access",
+    "I want raise a ticket for laptop issues",
+    "I want to raise a ticket for software"
+  ],
+  "responses": [
+    "You can raise a ticket from Dashboard → Useful Link → [Helpdesk Application](https://helpdesk.intelizign.com/)"
+  ],
+  "metadata": {
+    "category": "IT Support",
+    "requires_login": true,
+    "portal": "Helpdesk",
+    "link": "https://helpdesk.intelizign.com/",
+    "keywords": ["raise ticket", "VPN", "laptop", "software", "IT issues"]
+  }
+  },
+  {
+  "intent": "payslip_details_location",
+  "examples": [
+    "where can I get payslip details",
+    "how to check my payslip",
+    "in which portal can I download payslips",
+    "where are salary slips available",
+    "which app provides payslip details",
+    "how to download tax related slips",
+    "how to download payslip"
+  ],
+  "responses": [
+    "You can get your payslip details from Dashboard → Useful Link → [ADP ESS](https://www.vista.adp.com/in/V6/ess/login)."
+  ],
+  "metadata": {
+    "category": "Payroll",
+    "requires_login": true,
+    "portal": "ADP ESS",
+    "link": "https://www.vista.adp.com/in/V6/ess/login",
+    "keywords": ["payslip", "salary slip", "tax slip", "form16"]
+  }
+  },
+  {
+  "intent": "training_support_location",
+  "examples": [
+    "where can I access training support",
+    "which app is used for training help",
+    "where do I login for trainings",
+    "how to register for training portal",
+    "where is isupport located",
+    "i want to access trainings for teamcenter",
+    "i want to access trainings for polarion",
+    "i want to access trainings for mendix"
+  ],
+  "responses": [
+    "Training support is available in Dashboard → Useful Link → [iSupport](https://isupport.intelizign.com/), where you can login or register to access training modules."
+  ],
+  "metadata": {
+    "category": "Training",
+    "requires_login": true,
+    "portal": "iSupport",
+    "link": "https://isupport.intelizign.com/",
+    "keywords": ["training", "teamcenter", "polarion", "mendix", "devops"]
+  }
+  },
+  {
+  "intent": "tax_slips_location",
+  "examples": [
+    "where can I get tax slips",
+    "how to download tax related slips",
+    "which app provides tax slips",
+    "where can I access income tax slips",
+    "how to get tax documents for employees",
+    "i want to access form16",
+    "i want form 16"
+  ],
+  "responses": [
+    "You can download your tax-related slips from Dashboard → Useful Link → [ADP ESS](https://www.vista.adp.com/in/V6/ess/login)."
+  ],
+  "metadata": {
+    "category": "Payroll",
+    "requires_login": true,
+    "portal": "ADP ESS",
+    "link": "https://www.vista.adp.com/in/V6/ess/login",
+    "keywords": ["tax slips", "form16", "income tax", "salary documents"]
+  }
+  },
+  {
+  "intent": "it_help_location",
+  "examples": [
+    "where to ask for IT help",
+    "which app is used for IT issues",
+    "how can I report an IT problem",
+    "where can I get IT support",
+    "helpdesk ticket portal location"
+  ],
+  "responses": [
+    "For IT help, login or register in Dashboard → Useful Link → [Helpdesk Application](https://helpdesk.intelizign.com/) and raise a ticket."
+  ],
+  "metadata": {
+    "category": "IT Support",
+    "requires_login": true,
+    "portal": "Helpdesk",
+    "link": "https://helpdesk.intelizign.com/",
+    "keywords": ["IT help", "technical support", "ticket", "helpdesk"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "timesheet_location",
+  "examples": [
+    "where can I fill my timesheet",
+    "location of timesheet option",
+    "where is timesheet in portal",
+    "how to open timesheet",
+    "which menu has timesheet"
+  ],
+  "responses": [
+    "You can access the Timesheet from Personal → Timesheet."
+  ],
+  "metadata": {
+    "category": "Timesheet",
+    "requires_login": true,
+    "keywords": ["timesheet", "location", "menu", "portal"],
+    "related_intents": ["timesheet_filling", "timesheet_deadline"]
+  }
+  },
+  {
+  "intent": "timesheet_deadline",
+  "examples": [
+    "when should timesheet be submitted",
+    "last date to fill timesheet",
+    "timesheet submission deadline",
+    "before which date should I complete my timesheet"
+  ],
+  "responses": [
+    "Timesheets must be filled before the 22nd of every month."
+  ],
+  "metadata": {
+    "category": "Timesheet",
+    "requires_login": true,
+    "keywords": ["deadline", "last date", "submission", "timesheet"],
+    "related_intents": ["timesheet_location", "timesheet_filling"]
+  }
+  },
+  {
+  "intent": "timesheet_filling",
+  "examples": [
+    "how to fill timesheet",
+    "steps to update timesheet",
+    "what details should I give in timesheet",
+    "how to enter hours in timesheet",
+    "process to complete timesheet entry"
+  ],
+  "responses": [
+    "In the Timesheet, you need to mention how many hours you worked, what tasks you did each day, and select the appropriate task.\n\n- If you are in a **non-billable project**, fill in **8 hours** per day.\n- If you are in a **billable project**, fill in the **actual hours worked** on the project.\n\nAfter entering the details, click the **'Save Timesheet'** button to save your entries."
+  ],
+  "metadata": {
+    "category": "Timesheet",
+    "requires_login": true,
+    "keywords": ["fill", "update", "process", "hours", "tasks"],
+    "related_intents": ["timesheet_save", "timesheet_deadline"]
+  }
+  },
+  {
+  "intent": "timesheet_save",
+  "examples": [
+    "how to save timesheet",
+    "is there a save button in timesheet",
+    "my timesheet is not saving",
+    "how do I confirm timesheet submission"
+  ],
+  "responses": [
+    "After filling your timesheet, click the 'Save Timesheet' button to save your entries. Without clicking Save, the details will not be stored."
+  ],
+  "metadata": {
+    "category": "Timesheet",
+    "requires_login": true,
+    "keywords": ["save", "submit", "confirm", "timesheet"],
+    "related_intents": ["timesheet_filling"]
+  }
+  },
+  {
+  "intent": "timesheet_holidays",
+  "examples": [
+    "do I need to fill timesheet on holidays",
+    "how to enter weekends in timesheet",
+    "are holidays auto filled in timesheet",
+    "what about weekends in timesheet entry"
+  ],
+  "responses": [
+    "If it is a holiday or weekend, the system will automatically take it by default. You do not need to manually enter details for those days."
+  ],
+  "metadata": {
+    "category": "Timesheet",
+    "requires_login": true,
+    "keywords": ["holidays", "weekends", "auto-fill", "timesheet"],
+    "related_intents": ["holiday_january_2025"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "personal_policies",
+  "examples": [
+    "where can I find company policies",
+    "how do I access policies",
+    "show me the HR policies",
+    "policy documents",
+    "where are the policies",
+    "i want to read the company policies",
+    "give me about leave policies",
+    "polices"
+  ],
+  "responses": [
+    "You can access all company policies via **iAssistant** in Microsoft Teams: [Open iAssistant](https://teams.microsoft.com/l/app/3bfe6b06-1a46-4dbc-b474-22dc72586d24?source=app-details-dialog)"
+  ],
+  "metadata": {
+    "category": "Policies",
+    "requires_login": true,
+    "access_platform": "Microsoft Teams",
+    "keywords": ["policies", "HR policies", "company rules", "documents"],
+    "related_intents": ["iconnect_overview", "useful_links_location"],
+    "confidential": true
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "employee_search_location",
+  "examples": [
+    "where can I search employees",
+    "employee search location",
+    "how to open employee search",
+    "which menu has employee search",
+    "where is the employee search option"
+  ],
+  "responses": [
+    "You can search for employees in Personal → Employee Search."
+  ],
+  "metadata": {
+    "category": "Employee Search",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["employee search", "find employee", "staff lookup"],
+    "related_intents": ["employee_search_method", "employee_search_results", "employee_search_select"]
+  }
+  },
+  {
+  "intent": "employee_search_method",
+  "examples": [
+    "how can I search for an employee",
+    "ways to find employees in portal",
+    "search employee using name",
+    "can I search employee by emp code",
+    "how to look up an employee details",
+    "what are required to search for employee"
+  ],
+  "responses": [
+    "You can search for an employee using their First Name, Middle Name, or Employee Code in the Employee Search section."
+  ],
+  "metadata": {
+    "category": "Employee Search",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["search by name", "search by code", "employee lookup"],
+    "related_intents": ["employee_search_location", "employee_search_results"]
+  }
+  },
+  {
+  "intent": "employee_search_results",
+  "examples": [
+    "what details can I see in employee search",
+    "which information do I get after searching employee",
+    "employee search result details",
+    "can I know reporting manager from employee search",
+    "does employee search show contact details",
+    "employee search is for"
+  ],
+  "responses": [
+    "The Employee Search displays Employee ID, Location, Contact Details, and Reporting Manager once you select an employee from the results."
+  ],
+  "metadata": {
+    "category": "Employee Search",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["employee details", "search results", "contact info", "reporting manager"],
+    "related_intents": ["employee_search_method", "employee_search_select"]
+  }
+  },
+  {
+  "intent": "employee_search_select",
+  "examples": [
+    "how to select employee after search",
+    "where is select employee section",
+    "how do I confirm an employee from the search",
+    "steps to choose employee from search result"
+  ],
+  "responses": [
+    "After searching, select the required employee from the 'Select Employee' section to view complete details."
+  ],
+  "metadata": {
+    "category": "Employee Search",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["select employee", "choose employee", "view details"],
+    "related_intents": ["employee_search_results"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "newsletter_location",
+  "examples": [
+    "where can I find the newsletter",
+    "location of company newsletter",
+    "how to access newsletter",
+    "which menu has newsletter",
+    "where is the newsletter section"
+  ],
+  "responses": [
+    "You can access the Newsletter section from the portal to view monthly company updates."
+  ],
+  "metadata": {
+    "category": "Newsletter",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["newsletter", "company updates", "monthly updates"],
+    "related_intents": ["newsletter_purpose", "newsletter_frequency", "newsletter_content"]
+  }
+  },
+  {
+  "intent": "newsletter_purpose",
+  "examples": [
+    "what is the newsletter for",
+    "why do we have a newsletter",
+    "purpose of company newsletter",
+    "what information does newsletter provide",
+    "where can i fine updates of the company"
+  ],
+  "responses": [
+    "The Newsletter provides monthly updates about the company, including important announcements, achievements, and upcoming events."
+  ],
+  "metadata": {
+    "category": "Newsletter",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["purpose", "company news", "announcements", "updates"],
+    "related_intents": ["newsletter_location", "newsletter_frequency", "newsletter_content"]
+  }
+  },
+  {
+  "intent": "newsletter_frequency",
+  "examples": [
+    "how often is the newsletter published",
+    "newsletter frequency",
+    "do we get newsletter every month",
+    "when is newsletter released"
+  ],
+  "responses": [
+    "The company newsletter is released every month with the latest updates."
+  ],
+  "metadata": {
+    "category": "Newsletter",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["frequency", "release schedule", "monthly newsletter"],
+    "related_intents": ["newsletter_location", "newsletter_purpose", "newsletter_content"]
+  }
+  },
+  {
+  "intent": "newsletter_content",
+  "examples": [
+    "what does the newsletter contain",
+    "newsletter details",
+    "which topics are covered in newsletter",
+    "does newsletter have company news"
+  ],
+  "responses": [
+    "The Newsletter contains company updates, achievements, employee highlights, upcoming events, and other important announcements."
+  ],
+  "metadata": {
+    "category": "Newsletter",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["content", "topics", "company news", "employee highlights", "events"],
+    "related_intents": ["newsletter_location", "newsletter_purpose", "newsletter_frequency"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "itravel_location",
+  "examples": [
+    "where can I access iTravel",
+    "how to open iTravel",
+    "location of iTravel in portal",
+    "which menu has iTravel",
+    "where is iTravel option available"
+  ],
+  "responses": [
+    "You can access iTravel from Personal → iTravel."
+  ],
+  "metadata": {
+    "category": "iTravel",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iTravel", "travel request", "travel portal", "travel menu"],
+    "related_intents": ["itravel_purpose", "itravel_process", "itravel_types", "itravel_history"]
+  }
+  },
+  {
+  "intent": "itravel_purpose",
+  "examples": [
+    "What is iTravel",
+    "what is iTravel used for",
+    "why do we have iTravel",
+    "purpose of iTravel module",
+    "when should I use iTravel"
+  ],
+  "responses": [
+    "When an employee needs to travel for work, they can claim their travel, stay, and ticket expenses through **iTravel**."
+  ],
+  "metadata": {
+    "category": "iTravel",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["travel claim", "travel purpose", "expense reimbursement", "work travel"],
+    "related_intents": ["itravel_location", "itravel_process", "itravel_types", "itravel_history"]
+  }
+  },
+  {
+  "intent": "itravel_process",
+  "examples": [
+    "how to apply for travel",
+    "steps to request travel in iTravel",
+    "what details should I give in iTravel",
+    "how do I submit travel request",
+    "how to claim my travel tickets",
+    "how can i get reimbursement for travel expenses",
+    "can i claim the travel expenses for international travel",
+    "how can i book domestic travel expenses"
+  ],
+  "responses": [
+    "To apply for travel, go to Personal → iTravel and fill in the required fields. Provide travel details, select domestic or international, and then submit your request."
+  ],
+  "metadata": {
+    "category": "iTravel",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["travel request", "travel process", "apply travel", "submit request"],
+    "related_intents": ["itravel_location", "itravel_purpose", "itravel_types", "itravel_history"]
+  }
+  },
+  {
+  "intent": "itravel_types",
+  "examples": [
+    "what are the travel types in iTravel",
+    "difference between domestic and international travel",
+    "does iTravel support international travel",
+    "can I book domestic and international trips in iTravel"
+  ],
+  "responses": [
+    "iTravel provides two options: Domestic Travel and International Travel. Select the appropriate option when applying."
+  ],
+  "metadata": {
+    "category": "iTravel",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["domestic travel", "international travel", "travel types", "travel options"],
+    "related_intents": ["itravel_location", "itravel_purpose", "itravel_process", "itravel_history"]
+  }
+  },
+  {
+  "intent": "itravel_history",
+  "examples": [
+    "can I see my travel history",
+    "where to check previous travel records",
+    "how to view past travel requests",
+    "does iTravel show travel history"
+  ],
+  "responses": [
+    "Yes, iTravel allows you to view the history of your previous travel requests."
+  ],
+  "metadata": {
+    "category": "iTravel",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["travel history", "past travel", "previous requests", "view travel records"],
+    "related_intents": ["itravel_location", "itravel_purpose", "itravel_process", "itravel_types"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "ivisa_location",
+  "examples": [
+    "where can I find iVisa",
+    "location of iVisa in portal",
+    "how to open iVisa",
+    "which menu has iVisa",
+    "where is the iVisa option available"
+  ],
+  "responses": [
+    "You can access iVisa from Personal → iVisa."
+  ],
+  "metadata": {
+    "category": "iVisa",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iVisa", "visa request", "visa module", "visa portal location"],
+    "related_intents": ["ivisa_purpose", "ivisa_request_process", "ivisa_requirement"]
+  }
+  },
+  {
+  "intent": "ivisa_purpose",
+  "examples": [
+    "what is iVisa used for",
+    "What is ivisa",
+    "why do we need iVisa",
+    "purpose of iVisa module",
+    "when should I use iVisa"
+  ],
+  "responses": [
+    "The iVisa module is used to request a visa when you need to travel abroad for official purposes."
+  ],
+  "metadata": {
+    "category": "iVisa",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["visa purpose", "official travel visa", "iVisa usage", "visa application"],
+    "related_intents": ["ivisa_location", "ivisa_request_process", "ivisa_requirement"]
+  }
+  },
+  {
+  "intent": "ivisa_request_process",
+  "examples": [
+    "how to request for a visa",
+    "steps to apply for visa in portal",
+    "visa request process",
+    "how can I submit visa application"
+  ],
+  "responses": [
+    "To request a visa, go to Personal → iVisa, fill in the required details, and submit your request for processing."
+  ],
+  "metadata": {
+    "category": "iVisa",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["request visa", "submit visa", "visa process", "visa application steps"],
+    "related_intents": ["ivisa_location", "ivisa_purpose", "ivisa_requirement"]
+  }
+  },
+  {
+  "intent": "ivisa_requirement",
+  "examples": [
+    "what details are needed for visa request",
+    "what information should I give in iVisa",
+    "documents required for visa request",
+    "what to fill in iVisa form"
+  ],
+  "responses": [
+    "In iVisa, you need to provide travel details and required information for processing your visa request. Additional documents may be required depending on the destination country."
+  ],
+  "metadata": {
+    "category": "iVisa",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["visa documents", "visa details", "visa requirements", "visa form info"],
+    "related_intents": ["ivisa_location", "ivisa_purpose", "ivisa_request_process"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "iforex_location",
+  "examples": [
+    "where can I find iForex",
+    "location of iForex in portal",
+    "how to open iForex",
+    "which menu has iForex",
+    "where is the iForex option available"
+  ],
+  "responses": [
+    "You can access iForex from Personal → iForex."
+  ],
+  "metadata": {
+    "category": "iForex",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iForex", "currency exchange", "foreign exchange", "iForex location", "foreign currency portal"],
+    "related_intents": ["iforex_purpose", "iforex_process", "iforex_requirement"]
+  }
+  },
+  {
+  "intent": "iforex_purpose",
+  "examples": [
+    "what is iForex used for",
+    "why do we need iForex",
+    "purpose of iForex module",
+    "when should I use iForex",
+    "what is iforex",
+    "what is the process for exchanging currencies"
+  ],
+  "responses": [
+    "The iForex is used when you travel to a foreign country and need support for currency exchange."
+  ],
+  "metadata": {
+    "category": "iForex",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iForex purpose", "currency exchange use", "foreign currency support", "iForex usage"],
+    "related_intents": ["iforex_location", "iforex_process", "iforex_requirement"]
+  }
+  },
+  {
+  "intent": "iforex_process",
+  "examples": [
+    "how to request for foreign currency",
+    "steps to use iForex",
+    "process of iForex request",
+    "how to apply for currency exchange in portal",
+    "what is the process for claiming currency exchange in iforex",
+    "what are the steps to exchange the currency",
+    "what is the steps for currency exchange?"
+  ],
+  "responses": [
+    "To use iForex, go to Personal → iForex, fill in the required details of your foreign travel, and submit your request for currency exchange."
+  ],
+  "metadata": {
+    "category": "iForex",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iForex process", "currency exchange steps", "how to use iForex", "foreign currency request"],
+    "related_intents": ["iforex_location", "iforex_purpose", "iforex_requirement"]
+  }
+  },
+  {
+  "intent": "iforex_requirement",
+  "examples": [
+    "what details are needed for iForex",
+    "what information should I give for forex",
+    "documents required for currency exchange",
+    "what to fill in iForex form"
+  ],
+  "responses": [
+    "In iForex, you need to provide your travel details and required information to process the foreign currency exchange request."
+  ],
+  "metadata": {
+    "category": "iForex",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iForex requirements", "currency exchange info", "forex details", "iForex form details"],
+    "related_intents": ["iforex_location", "iforex_purpose", "iforex_process"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "itraining_location",
+  "examples": [
+    "where can I find iTraining",
+    "location of iTraining in portal",
+    "how to open iTraining",
+    "which menu has iTraining",
+    "where is the iTraining option available"
+  ],
+  "responses": [
+    "You can access iTraining from Personal → iTraining."
+  ],
+  "metadata": {
+    "category": "iTraining",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iTraining location", "training portal", "training module", "where is iTraining"],
+    "related_intents": ["itraining_purpose", "itraining_registration", "itraining_availability"]
+  }
+  },
+  {
+  "intent": "itraining_purpose",
+  "examples": [
+    "what is iTraining used for",
+    "why do we need iTraining",
+    "purpose of iTraining module",
+    "when should I use iTraining",
+    "what is iTraining"
+  ],
+  "responses": [
+    "The iTraining module is used to register for training sessions organized by the company."
+  ],
+  "metadata": {
+    "category": "iTraining",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iTraining purpose", "training module use", "register for trainings", "why iTraining"],
+    "related_intents": ["itraining_location", "itraining_registration", "itraining_availability"]
+  }
+  },
+  {
+  "intent": "itraining_registration",
+  "examples": [
+    "how to register for training",
+    "steps to apply for training session",
+    "training registration process",
+    "how can I enroll in training"
+  ],
+  "responses": [
+    "To register for a training session, go to Personal → iTraining, select the session you want, and complete the registration process."
+  ],
+  "metadata": {
+    "category": "iTraining",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["iTraining registration", "enroll in training", "training signup", "how to register for training"],
+    "related_intents": ["itraining_location", "itraining_purpose", "itraining_availability"]
+  }
+  },
+  {
+  "intent": "itraining_availability",
+  "examples": [
+    "where can I check available trainings",
+    "how to know upcoming trainings",
+    "training schedule in iTraining",
+    "list of trainings available"
+  ],
+  "responses": [
+    "You can view upcoming and available training sessions directly in the iTraining module before registering."
+  ],
+  "metadata": {
+    "category": "iTraining",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["training availability", "upcoming trainings", "training schedule", "list of trainings"],
+    "related_intents": ["itraining_location", "itraining_purpose", "itraining_registration"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "ireimbursement_location",
+  "examples": [
+    "where can I find create reimbursement",
+    "location of reimbursement option",
+    "how to open reimbursement form",
+    "which menu has reimbursement",
+    "where is the reimbursement option available"
+  ],
+  "responses": [
+    "You can access it from iReimbursement → Create Reimbursement."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement location", "create reimbursement", "reimbursement menu", "where is reimbursement"],
+    "related_intents": ["ireimbursement_purpose", "ireimbursement_types", "ireimbursement_process", "ireimbursement_details"]
+  }
+  },
+  {
+  "intent": "ireimbursement_purpose",
+  "examples": [
+    "what is reimbursement used for",
+    "why do we need create reimbursement",
+    "purpose of reimbursement module",
+    "when should I use reimbursement"
+  ],
+  "responses": [
+    "The Create Reimbursement option is used to claim allowances and expenses incurred during official work."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement purpose", "why reimbursement", "use of reimbursement", "purpose of reimbursement module"],
+    "related_intents": ["ireimbursement_location", "ireimbursement_types", "ireimbursement_process", "ireimbursement_details"]
+  }
+  },
+  {
+  "intent": "ireimbursement_types",
+  "examples": [
+    "what types of reimbursement are there",
+    "different reimbursement types",
+    "which categories are available in reimbursement",
+    "what are the options in create reimbursement"
+  ],
+  "responses": [
+    "In Create Reimbursement, you can claim two types: Allowances and Expenses."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement types", "allowance and expense", "categories in reimbursement", "types of reimbursement claim"],
+    "related_intents": ["ireimbursement_location", "ireimbursement_purpose", "ireimbursement_process", "ireimbursement_details"]
+  }
+  },
+  {
+  "intent": "ireimbursement_process",
+  "examples": [
+    "how to create reimbursement",
+    "steps to apply for reimbursement",
+    "process of reimbursement claim",
+    "how to submit reimbursement request"
+  ],
+  "responses": [
+    "To create a reimbursement, go to iReimbursement → Create Reimbursement, select allowance or expense, fill in all required details, save it, and then submit for approval."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement process", "how to submit reimbursement", "reimbursement steps", "claim reimbursement"],
+    "related_intents": ["ireimbursement_location", "ireimbursement_purpose", "ireimbursement_types", "ireimbursement_details"]
+  }
+  },
+  {
+  "intent": "ireimbursement_details",
+  "examples": [
+    "what details are needed for reimbursement",
+    "what information should I give in reimbursement form",
+    "documents required for reimbursement",
+    "what to fill in reimbursement request"
+  ],
+  "responses": [
+    "In the reimbursement form, you need to provide details such as type (allowance or expense), amount, purpose, date, and attach supporting bills if applicable."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement details", "information for reimbursement", "reimbursement form fields", "documents required for reimbursement"],
+    "related_intents": ["ireimbursement_location", "ireimbursement_purpose", "ireimbursement_types", "ireimbursement_process"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "myreimbursement_location",
+  "examples": [
+    "where can I find my reimbursement",
+    "location of my reimbursement option",
+    "how to open my reimbursement",
+    "which menu has my reimbursement",
+    "where is the my reimbursement option available"
+  ],
+  "responses": [
+    "You can access it from iReimbursement → My Reimbursement."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["my reimbursement location", "check reimbursement", "view my reimbursement", "reimbursement menu"],
+    "related_intents": ["myreimbursement_purpose", "allowances_expenses", "myreimbursement_checkstatus", "myreimbursement_history"]
+  }
+  },
+  {
+  "intent": "myreimbursement_purpose",
+  "examples": [
+    "what is my reimbursement used for",
+    "why do we need my reimbursement",
+    "purpose of my reimbursement module",
+    "when should I use my reimbursement"
+  ],
+  "responses": [
+    "The My Reimbursement option allows you to check all your submitted reimbursements and the amounts received."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["purpose of my reimbursement", "check submitted reimbursements", "reimbursement overview"],
+    "related_intents": ["myreimbursement_location", "allowances_expenses", "myreimbursement_checkstatus", "myreimbursement_history"]
+  }
+  },
+  {
+  "intent": "allowances_expenses",
+  "examples": [
+    "what are the types of allowances",
+    "explain the allowances and expenses",
+    "how to claim expenses",
+    "types of reimbursements",
+    "allowances and expenses details",
+    "what allowances are provided",
+    "what expenses can I claim"
+  ],
+  "responses": [
+    "In **iReimbursement**, there are different types of allowances and expenses:\n\n**Allowances:**\n- Accommodation Allowance\n- Interview Allowance\n- Joining Bonus\n- Local Conveyance Allowance\n- Onsite Allowance - International\n- Referral Bonus\n- Relocation Bonus\n\n**Expenses:**\n- Business Promotion\n- Computer\n- Food\n- Internet\n- Kit Allowance\n- Learning and Development\n- Lodging\n- Postage and Stationery\n- Subscription and Licenses\n- Telephone\n- Travel\n\nYou can claim these through the **iReimbursement** portal."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["allowances", "expenses", "types of reimbursement", "claimable items", "iReimbursement categories"],
+    "related_intents": ["myreimbursement_location", "myreimbursement_purpose", "myreimbursement_checkstatus", "myreimbursement_history"]
+  }
+  },
+  {
+  "intent": "myreimbursement_checkstatus",
+  "examples": [
+    "how to check reimbursement status",
+    "how do I know if reimbursement is approved",
+    "track my reimbursement request",
+    "where to see reimbursement status"
+  ],
+  "responses": [
+    "You can check the status of your reimbursement under iReimbursement → My Reimbursement, where approval and payment details are listed."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement status", "check approval", "track reimbursement", "my reimbursement status"],
+    "related_intents": ["myreimbursement_location", "myreimbursement_purpose", "allowances_expenses", "myreimbursement_history"]
+  }
+  },
+  {
+  "intent": "myreimbursement_history",
+  "examples": [
+    "how to view past reimbursements",
+    "previous reimbursement details",
+    "reimbursement history in portal",
+    "old reimbursement records"
+  ],
+  "responses": [
+    "All past reimbursements can be viewed in the My Reimbursement section with details of claim type, date, and amount."
+  ],
+  "metadata": {
+    "category": "iReimbursement",
+    "requires_login": true,
+    "access_platform": "iConnect Portal",
+    "keywords": ["reimbursement history", "previous claims", "old reimbursement records", "view past reimbursements"],
+    "related_intents": ["myreimbursement_location", "myreimbursement_purpose", "allowances_expenses", "myreimbursement_checkstatus"]
+  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "riskidentification_location",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Navigation",
+    "priority": "high",
+    "tags": ["risk identification", "complaint location", "navigation", "menu"]
+  },
+  "examples": [
+    "where can I find risk identification",
+    "location of risk identification option",
+    "how to open risk identification",
+    "which menu has risk identification",
+    "where is the risk identification option available",
+    "where can i file my complaint"
+  ],
+  "responses": [
+    "You can access it from **Risk Management User → Risk Identification**."
+  ]
+  },
+  {
+  "intent": "riskidentification_purpose",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Purpose",
+    "priority": "medium",
+    "tags": ["risk identification", "purpose", "usage", "complaints"]
+  },
+  "examples": [
+    "what is risk identification used for",
+    "why do we need risk identification",
+    "purpose of risk identification module",
+    "when should I use risk identification"
+  ],
+  "responses": [
+    "The **Risk Identification** module is used to report problems or risks in specific categories so that they can be addressed properly."
+  ]
+  },
+  {
+  "intent": "riskidentification_process",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Process",
+    "priority": "high",
+    "tags": ["risk identification", "process", "steps", "submit complaint", "raise issue"]
+  },
+  "examples": [
+    "how to report a risk",
+    "steps to submit risk identification",
+    "what are the steps to submit my complaint",
+    "process of reporting problem",
+    "how can I raise an issue in risk identification"
+  ],
+  "responses": [
+    "To report a risk, go to **Risk Management User → Risk Identification**, mention the exact location or category of the problem, provide a detailed description, and then submit."
+  ]
+  },
+  {
+  "intent": "riskidentification_details",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Required Details",
+    "priority": "medium",
+    "tags": ["risk identification", "details", "mandatory fields", "information", "form"]
+  },
+  "examples": [
+    "what details are needed for risk identification",
+    "what information should I give in risk report",
+    "what to fill in risk identification form",
+    "which fields are mandatory in risk identification",
+    "what is risk identification used for"
+  ],
+  "responses": [
+    "In the **Risk Identification** form, you must specify where the problem exists, describe the issue in detail, and then submit for further review."
+  ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+  "intent": "riskidentified_location",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Navigation",
+    "priority": "high",
+    "tags": ["risk identified", "complaint location", "navigation", "menu"]
+  },
+  "examples": [
+    "where can I find risk identified",
+    "location of risk identified option",
+    "how to open risk identified",
+    "which menu has risk identified",
+    "where is the risk identified option available",
+    "i want to raise a complaint",
+    "i want to complaint regarding generator backup"
+  ],
+  "responses": [
+    "You can access it from **Risk Management User → Risk Identified**."
+  ]
+  },
+  {
+  "intent": "riskidentified_purpose",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Purpose",
+    "priority": "medium",
+    "tags": ["risk identified", "purpose", "usage", "complaints"]
+  },
+  "examples": [
+    "what is risk identified used for",
+    "why do we need risk identified",
+    "purpose of risk identified module",
+    "when should I use risk identified",
+    "where can i raise complaint",
+    "i want to raise a complaint"
+  ],
+  "responses": [
+    "The **Risk Identified** module is used to view the reports of risks / complaint that you have already submitted."
+  ]
+  },
+  {
+  "intent": "riskidentified_view",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Viewing Reports",
+    "priority": "high",
+    "tags": ["risk identified", "view risks", "submitted complaints", "reports"]
+  },
+  "examples": [
+    "how to see reported risks",
+    "how to see complaint reported",
+    "where can I check my risk reports",
+    "view submitted risks",
+    "how do I know which risks I reported"
+  ],
+  "responses": [
+    "You can see the details of risks you reported under **Risk Management User → Risk Identified**."
+  ]
+  },
+  {
+  "intent": "riskidentified_status",
+  "metadata": {
+    "category": "Risk Management",
+    "subcategory": "Tracking Status",
+    "priority": "high",
+    "tags": ["risk identified", "status", "complaint status", "progress"]
+  },
+  "examples": [ 
+    "how to check status of my risk",
+    "is my reported risk reviewed",
+    "who is handling my risk report",
+    "status of risk identified",
+    "status of my complaint"
+  ],
+  "responses": [
+    "In the **Risk Identified** section, you can check the details and current status of the risks you have submitted."
+  ]
+  }
+
+
+  ]
+}
+
+
+
+  
+
+
