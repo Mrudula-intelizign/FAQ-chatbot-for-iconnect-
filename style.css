@@ -1,0 +1,178 @@
+/* ---------- FULL PAGE BACKGROUND FIX ---------- */
+html, body, [data-testid="stAppViewContainer"], [data-testid="stApp"], [data-testid="stMainBlockContainer"], [data-testid="stVerticalBlock"], [data-testid="stChatInputContainer"], [data-testid="stBottomBlockContainer"] {
+    background: linear-gradient(135deg, #acd2fb 0%, #f8fbff 50%, #acd2fb 100%) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Ensure full height coverage */
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ---------- TITLE ---------- */
+/* .h1 {
+    color: #004c97;
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 0.3em;
+    font-weight: 700;
+    font-size: 2.2rem;
+} */
+ /* ---------- TITLE WITH LOGO ---------- */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: -50px;
+}
+
+.title-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.h1 {
+    color: #004c97;
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+
+/* ---------- CHAT CONTAINER ---------- */
+.chat-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+/* ---------- USER MESSAGE ---------- */
+.user-msg {
+    background-color: #004c97;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 18px 18px 18px 0;
+    margin: 0.5rem 0;
+    width: fit-content;
+    max-width: 75%;
+    text-align: left;
+}
+
+/* ---------- BOT MESSAGE ---------- */
+.bot-msg {
+    background-color: #cdd7e3;
+    color: #003366;
+    padding: 0.8rem 1rem;
+    border-radius: 18px 18px 0 18px;
+    margin: 0.5rem 0;
+    width: fit-content;
+    max-width: 75%;
+    text-align: left;
+    margin-left: auto;
+}
+
+/* ---------- CHAT INPUT ---------- */
+[data-testid="stChatInput"] {
+    background: rgba(255, 255, 255, 0.2) !important; /* subtle glass look */
+    border: 1px solid rgba(0, 76, 151, 0.2) !important;
+    border-radius: 25px !important;
+    padding: 0.5rem 1rem !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(6px);
+    width: 70% !important;
+    margin: 1rem auto 2rem auto !important;
+}
+
+/* Adjust placeholder */
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #333 !important;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Adjust inner textarea */
+[data-testid="stChatInput"] textarea {
+    background: transparent !important;
+    border: none !important;
+    font-size: 1rem !important;
+}
+
+/* ---------- BUTTONS ---------- */
+.stButton > button {
+    background-color: #004c97;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 0.4rem 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.stButton > button:hover {
+    background-color: #0077cc;
+    transform: scale(1.03);
+}
+
+/* ---------- SUGGESTION SECTION ---------- */
+.suggestion-title {
+    font-weight: 600;
+    color: #004c97;
+    margin-bottom: 0.6rem;
+    font-size: 15px;
+}
+.suggestion-container .stButton > button {
+    background-color: #004c97 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 0.3rem 0.8rem !important;
+    width: 100% !important;
+    margin-bottom: 0.4rem !important;
+    font-size: 14px !important;
+}
+.suggestion-container .stButton > button:hover {
+    background-color: #0066cc !important;
+}
+
+/* ---------- MOVE CHAT INPUT DOWN ---------- */
+[data-testid="stChatInput"] {
+    margin-top: 1rem !important;   /* pushes it down from chat messages */
+    margin-bottom: 0rem !important;  /* pushes it up from bottom of screen */
+}
+
+
+/* ---------- WELCOME SCREEN ---------- */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45vh; /* centers vertically */
+    text-align: center;
+    color: #004c97;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-container p {
+    font-size: 1rem;
+    color: #003366;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
