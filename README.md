@@ -1,4 +1,4 @@
-# iConneXpert – Intelligent FAQ Assistant
+# iConnectXpert – Intelligent FAQ Assistant
 
 iConneXpert is an AI-powered FAQ bot designed to provide accurate and intelligent responses about **Intelizign iConnect**.  
 It leverages **Sentence Transformers** for semantic search and intent classification, and is deployed via **Streamlit** for an interactive UI.
